@@ -2,7 +2,7 @@ import speech_recognition as sr
 import pyttsx3
 
 
-def speech_to_text(command):
+def text_to_speech(command):
     """
     General function to convert text to speech
     :param command: text (type:string)
@@ -84,7 +84,7 @@ if __name__ == '__main__':
             f = open('notes.txt', 'w')
             f.write(data)
             f.close()
-            speech_to_text('Note written and saved. Is there anything else?')
+            text_to_speech('Note written and saved. Is there anything else?')
             print('Assistant: Note written and saved. Is there anything else? \n')
             flag = 0
             continue
@@ -92,6 +92,6 @@ if __name__ == '__main__':
             flag = 1
         print('Assistant: ', text)
         print('\n')
-        speech_to_text(text)
+        text_to_speech(text)
         if text == 'Ok goodbye!':
             break
